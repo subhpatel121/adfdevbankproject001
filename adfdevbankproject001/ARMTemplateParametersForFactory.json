@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdevbankproject001"
+		},
+		"LS_CSV_Bulk_accountKey": {
+			"value": ""
+		},
+		"LS_SINk_ADLS_accountKey": {
+			"value": ""
+		},
+		"LS_Sink_Avro_accountKey": {
+			"value": ""
+		},
+		"LS_Sink_Avro_Parquet_accountKey": {
+			"value": ""
+		},
+		"LS_Sink_Rest_Avro_accountKey": {
+			"value": ""
+		},
+		"LS_Sink_SQL_Parquet_accountKey": {
+			"value": ""
+		},
+		"LS_Source_ADLS_accountKey": {
+			"value": ""
+		},
+		"LS_Source_Avro_del_accountKey": {
+			"value": ""
+		},
+		"LS_Source_MSSQL_password": {
+			"value": ""
+		},
+		"LS_CSV_Bulk_properties_typeProperties_url": {
+			"value": "https://adlsdevbulkloaddemo.dfs.core.windows.net"
+		},
+		"LS_SINk_ADLS_properties_typeProperties_url": {
+			"value": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Sink_Avro_properties_typeProperties_url": {
+			"value": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Sink_Avro_Parquet_properties_typeProperties_url": {
+			"value": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Sink_Rest_Avro_properties_typeProperties_url": {
+			"value": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Sink_Rest_Parquet_properties_typeProperties_url": {
+			"value": "https://retoolapi.dev/5yDVOt/data"
+		},
+		"LS_Sink_SQL_Parquet_properties_typeProperties_url": {
+			"value": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Source_ADLS_properties_typeProperties_url": {
+			"value": "https://adlsdevbulkloaddemo.dfs.core.windows.net"
+		},
+		"LS_Source_Avro_del_properties_typeProperties_url": {
+			"value": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Source_MSSQL_properties_typeProperties_server": {
+			"value": "LAPTOP-MHJP2LVG\\SQLEXPRESS"
+		},
+		"LS_Source_MSSQL_properties_typeProperties_database": {
+			"value": "AdventureWorks2019"
+		},
+		"LS_Source_MSSQL_properties_typeProperties_userName": {
+			"value": "visionboard"
+		}
+	}
+}

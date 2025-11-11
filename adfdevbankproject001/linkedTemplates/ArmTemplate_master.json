@@ -1,0 +1,209 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfdevbankproject001"
+		},
+		"LS_CSV_Bulk_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_Bulk'"
+		},
+		"LS_SINk_ADLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SINk_ADLS'"
+		},
+		"LS_Sink_Avro_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Sink_Avro'"
+		},
+		"LS_Sink_Avro_Parquet_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Sink_Avro_Parquet'"
+		},
+		"LS_Sink_Rest_Avro_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Sink_Rest_Avro'"
+		},
+		"LS_Sink_SQL_Parquet_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Sink_SQL_Parquet'"
+		},
+		"LS_Source_ADLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Source_ADLS'"
+		},
+		"LS_Source_Avro_del_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Source_Avro_del'"
+		},
+		"LS_Source_MSSQL_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_Source_MSSQL'"
+		},
+		"LS_CSV_Bulk_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevbulkloaddemo.dfs.core.windows.net"
+		},
+		"LS_SINk_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Sink_Avro_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Sink_Avro_Parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Sink_Rest_Avro_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Sink_Rest_Parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://retoolapi.dev/5yDVOt/data"
+		},
+		"LS_Sink_SQL_Parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Source_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevbulkloaddemo.dfs.core.windows.net"
+		},
+		"LS_Source_Avro_del_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevbankproject01.dfs.core.windows.net/"
+		},
+		"LS_Source_MSSQL_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "LAPTOP-MHJP2LVG\\SQLEXPRESS"
+		},
+		"LS_Source_MSSQL_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorks2019"
+		},
+		"LS_Source_MSSQL_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "visionboard"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfdevbankproject001_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_CSV_Bulk_accountKey": {
+						"value": "[parameters('LS_CSV_Bulk_accountKey')]"
+					},
+					"LS_SINk_ADLS_accountKey": {
+						"value": "[parameters('LS_SINk_ADLS_accountKey')]"
+					},
+					"LS_Sink_Avro_accountKey": {
+						"value": "[parameters('LS_Sink_Avro_accountKey')]"
+					},
+					"LS_Sink_Avro_Parquet_accountKey": {
+						"value": "[parameters('LS_Sink_Avro_Parquet_accountKey')]"
+					},
+					"LS_Sink_Rest_Avro_accountKey": {
+						"value": "[parameters('LS_Sink_Rest_Avro_accountKey')]"
+					},
+					"LS_Sink_SQL_Parquet_accountKey": {
+						"value": "[parameters('LS_Sink_SQL_Parquet_accountKey')]"
+					},
+					"LS_Source_ADLS_accountKey": {
+						"value": "[parameters('LS_Source_ADLS_accountKey')]"
+					},
+					"LS_Source_Avro_del_accountKey": {
+						"value": "[parameters('LS_Source_Avro_del_accountKey')]"
+					},
+					"LS_Source_MSSQL_password": {
+						"value": "[parameters('LS_Source_MSSQL_password')]"
+					},
+					"LS_CSV_Bulk_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_Bulk_properties_typeProperties_url')]"
+					},
+					"LS_SINk_ADLS_properties_typeProperties_url": {
+						"value": "[parameters('LS_SINk_ADLS_properties_typeProperties_url')]"
+					},
+					"LS_Sink_Avro_properties_typeProperties_url": {
+						"value": "[parameters('LS_Sink_Avro_properties_typeProperties_url')]"
+					},
+					"LS_Sink_Avro_Parquet_properties_typeProperties_url": {
+						"value": "[parameters('LS_Sink_Avro_Parquet_properties_typeProperties_url')]"
+					},
+					"LS_Sink_Rest_Avro_properties_typeProperties_url": {
+						"value": "[parameters('LS_Sink_Rest_Avro_properties_typeProperties_url')]"
+					},
+					"LS_Sink_Rest_Parquet_properties_typeProperties_url": {
+						"value": "[parameters('LS_Sink_Rest_Parquet_properties_typeProperties_url')]"
+					},
+					"LS_Sink_SQL_Parquet_properties_typeProperties_url": {
+						"value": "[parameters('LS_Sink_SQL_Parquet_properties_typeProperties_url')]"
+					},
+					"LS_Source_ADLS_properties_typeProperties_url": {
+						"value": "[parameters('LS_Source_ADLS_properties_typeProperties_url')]"
+					},
+					"LS_Source_Avro_del_properties_typeProperties_url": {
+						"value": "[parameters('LS_Source_Avro_del_properties_typeProperties_url')]"
+					},
+					"LS_Source_MSSQL_properties_typeProperties_server": {
+						"value": "[parameters('LS_Source_MSSQL_properties_typeProperties_server')]"
+					},
+					"LS_Source_MSSQL_properties_typeProperties_database": {
+						"value": "[parameters('LS_Source_MSSQL_properties_typeProperties_database')]"
+					},
+					"LS_Source_MSSQL_properties_typeProperties_userName": {
+						"value": "[parameters('LS_Source_MSSQL_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adfdevbankproject001_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfdevbankproject001_ArmTemplate_0')]"
+			]
+		}
+	]
+}
