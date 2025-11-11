@@ -1,0 +1,19 @@
+{
+	"name": "DS_Avro_Delete",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Source_Avro_del",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "data_ee4173a6-1f9b-44ac-a5f9-3b4bcfe5992b_966e66d8-a3dd-45f2-b0f8-74be0d3a1b1d.avro",
+				"fileSystem": "output"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

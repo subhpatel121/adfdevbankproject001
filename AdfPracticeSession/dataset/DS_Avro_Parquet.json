@@ -1,0 +1,20 @@
+{
+	"name": "DS_Avro_Parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Sink_Avro_Parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "outputmultiplefiles"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

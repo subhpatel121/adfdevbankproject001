@@ -1,0 +1,158 @@
+{
+	"name": "DS_Source_Avro",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Sink_Avro",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Avro",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "data_ee4173a6-1f9b-44ac-a5f9-3b4bcfe5992b_966e66d8-a3dd-45f2-b0f8-74be0d3a1b1d.avro",
+				"fileSystem": "output"
+			}
+		},
+		"schema": {
+			"type": "record",
+			"name": "HybridDelivery.ClientLibraryJob",
+			"fields": [
+				{
+					"name": "id",
+					"type": [
+						"long",
+						"null"
+					]
+				},
+				{
+					"name": "Sku",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "TP_1",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "TP_2",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "index",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "Weight",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "Catalog",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "MRPOld",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "AjioMRP",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "Category",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "StyleId",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "PaytmMRP",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "AmazonMRP",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "MyntraMRP",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "FlipkartMRP",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "LimeroadMRP",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "SnapdealMRP",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "FinalMRPOld",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "AmazonFBAMRP",
+					"type": [
+						"string",
+						"null"
+					]
+				}
+			]
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

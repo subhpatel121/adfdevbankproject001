@@ -1,0 +1,9 @@
+{
+	"name": "adfdevbankproject001",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "751399b4-e27d-4411-aa13-3ff72d852b8a",
+		"tenantId": "bde9f581-9d4f-4c88-9ff9-bdde90890ed6"
+	}
+}

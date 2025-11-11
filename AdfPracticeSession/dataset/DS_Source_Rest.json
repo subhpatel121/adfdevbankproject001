@@ -1,0 +1,13 @@
+{
+	"name": "DS_Source_Rest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Sink_Rest_Parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

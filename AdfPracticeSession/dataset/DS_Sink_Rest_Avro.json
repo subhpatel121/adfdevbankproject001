@@ -1,0 +1,19 @@
+{
+	"name": "DS_Sink_Rest_Avro",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Sink_Rest_Avro",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Avro",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "output"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
